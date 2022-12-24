@@ -16,7 +16,7 @@ app.set("views",pathofview);
 
 app.get("/",async function (request, response) {
 
-    Todo.addTodo({title:"Deploy Website",dueDate:"2022-12-24"});
+    // Todo.addTodo({title:"Deploy Website",dueDate:"2022-12-24"});
    const todolist = await Todo.gettodos();
    const yesterday = await Todo.Overdue();
    const tomorrow = await Todo.duelater();
