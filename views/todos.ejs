@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:#FDE971;
+        }
+        h1{
+            width: 100%;
+            /* align-items: center; */
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table,tr,td,th{
+            font-size: 30px;
+            padding:10px;
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        div{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is my Todo Application</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+            <% for (let i = 0;i < todolist.length;i++) { %>
+                <tr>
+                    <td>
+                        <%= todolist[i].title %>
+                    </td>
+                    <td>
+                        <%= todolist[i].dueDate %>
+                    </td>
+                    <td>
+                        <%= todolist[i].completed %>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+    <%-include ("./footer") %>
+</body>
+</html>
